@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import Header from '../components/Header';
+import Sidebar from "../components/Sidebar";
+import Feed from "../components/Feed";
 
 export default function Home() {
   return (
@@ -9,14 +11,15 @@ export default function Home() {
       </Head>
       {/* {Header} */}
       <Header />
-      <main>
-        {/* {
-          <sidebar/>
+      <main className='flex'>
+       
+          <Sidebar/>
+        
           <Feed />
+        {/* {
           <Widgets />
         } */}
       </main>
     </div>
   )
 }
-

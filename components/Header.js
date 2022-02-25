@@ -19,7 +19,7 @@ import HeaderIcon from "./HeaderIcon";
 
 function Header() {
     return (
-        <div className="sticky top-0 bg-white flex items-center shadow-md">
+        <div className="sticky top-0 bg-white flex items-center shadow-xl sm:space-x-5 mb-4 mt-2">
             {/* {Left} */}
             <div className="flex items-center">
                 <Image src="https://links.papareact.com/5me"
@@ -37,7 +37,7 @@ function Header() {
             {/* {Center} */}
 
             <div className="flex justify-center flex-grow">
-                <div className="flex space-x-6 md: space-x-">
+                <div className="flex space-x-4 md: space-x-">
                     <HeaderIcon active Icon={HomeIcon} />
                     <HeaderIcon Icon={FlagIcon} />
                     <HeaderIcon Icon={PlayIcon} />
@@ -47,15 +47,19 @@ function Header() {
             </div>
 
             {/* {Right} */}
-
-            <div className="flex items-center  sm:space-x-2 justify-end xl:first-letter:hidden">
+            <div className="flex items-center sm:space-x-2
+            justify-end xl:first-letter:hidden">
+                <p className="whitespace-nowrap font-semibold pr-3">Ifeanyi</p>
+            </div>
+            <div className="flex items-center sm:space-x-2
+            justify-end xl:first-letter:hidden overflow-hidden">
+                {/* <p className="whitespace-nowrap font-semibold pr-3">Ifeanyi</p> */}
                 {/* Profile picture */}
 
-                <p className="whitespace-nowrap font-semibold pr-3">Ifeanyi</p>
-                <ViewGridIcon className="icon md-hidden"/>
-                <ChatIcon className="icon"/>
-                <BellIcon className="icon "/>
-                <ChevronDownIcon className="icon "/>
+                <ViewGridIcon className="icon xl:hidden" />
+                <ChatIcon className="icon" />
+                <BellIcon className="icon" />
+                <ChevronDownIcon className="icon" />
             </div>
         </div>
     )
